@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Registrations</title>
+</head>
+<body>
+    <h1>Registered Users</h1>
+    <ul>
+        <% registrations.forEach(registration => { %>
+            <li>
+                <strong>Name:</strong> <%= registration.name %><br>
+                <strong>College:</strong> <%= registration.College %><br>
+                <strong>Email:</strong> <%= registration.email %><br>
+                <strong>Phone Number:</strong> <%= registration.phno %><br>
+                <strong>Gender:</strong> <%= registration.gender %><br>
+                <strong>Accommodation:</strong> <%= registration.Accommodation %><br>
+                <strong>Transaction ID:</strong> <%= registration.transactionId %><br>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
