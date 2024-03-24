@@ -68,31 +68,8 @@ app.post("/login", async (req, res) => {
     }
 });
 
-app.get("/project", (req, res) => {
-    res.render("project");
-});
 
 
-app.get("/paper", (req, res) => {
-    res.render("paper");
-});
-
-app.get("/coding", (req, res) => {
-    res.render("coding");
-});
-
-app.get("/technical", (req, res) => {
-    res.render("technical");
-});
-app.get("/brain", (req, res) => {
-    res.render("brain");
-});
-app.get("/connection", (req, res) => {
-    res.render("connection");
-});
-app.get("/ipl", (req, res) => {
-    res.render("ipl");
-});
 // Define Port for Application
 const port = 5000;
 app.listen(port, () => {
