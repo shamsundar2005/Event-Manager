@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Registrations</title>
+</head>
+
+<body>
+    <h1>Registered Users</h1>
+    <div>
+        <form action="/filterAndDownload" method="post">
+            <label for="genderFilter">Filter by Gender:</label>
+            <select name="genderFilter" id="genderFilter">
+                <option value="">All</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+            <label for="collegeFilter">Filter by College:</label>
+            <select name="collegeFilter" id="collegeFilter">
+                <option value="">All</option>
+                <option value="Kongu engineering college">Kongu engineering college</option>
+                <option value="Anna university">Anna university</option>
+                <!-- Add more college options as needed -->
+            </select>
+            <label for="accommodationFilter">Filter by Accommodation:</label>
+            <select name="accommodationFilter" id="accommodationFilter">
+                <option value="">All</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <button type="submit">Apply Filters and Download CSV</button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>College</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Gender</th>
+                <th>Accommodation</th>
+                <th>Transaction ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in registrations %}
+            <tr>
+                <td>{{ registration.name }}</td>
+                <td>{{ registration.College }}</td>
+                <td>{{ registration.email }}</td>
+                <td>{{ registration.phno }}</td>
+                <td>{{ registration.gender }}</td>
+                <td>{{ registration.Accommodation }}</td>
+                <td>{{ registration.transactionId }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
