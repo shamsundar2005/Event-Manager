@@ -67,11 +67,39 @@ app.post("/login", async (req, res) => {
         res.send("wrong Details");
     }
 });
+app.get("/project", (req, res) => {
+    res.render("project");
+});
 
+
+app.get("/paper", (req, res) => {
+    res.render("paper");
+});
+
+app.get("/coding", (req, res) => {
+    res.render("coding");
+});
+
+app.get("/tech", (req, res) => {
+    res.render("tech");
+});
+app.get("/brain", (req, res) => {
+    res.render("brain");
+});
+app.get("/connection", (req, res) => {
+    res.render("connection");
+});
+app.get("/ipl", (req, res) => {
+    res.render("ipl");
+});
+
+app.get("/open", (req, res) => {
+    res.render("open");
+});
 
 
 // Define Port for Application
 const port = 5000;
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
